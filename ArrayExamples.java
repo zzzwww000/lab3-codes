@@ -30,11 +30,12 @@ public class ArrayExamples {
     for(double num: arr) {
       if(num < lowest) { lowest = num; }
     }
+    int counted = 0;//records the 
     double sum = 0;
     for(double num: arr) {
-      if(num != lowest) { sum += num; }
+      if(num != lowest) { sum += num; counted += 1;}
     }
-    return sum / (arr.length - 1);
+    return sum / (counted);
   }
 
 
